@@ -2,3 +2,6 @@
 but only install once
 - pip install is from REGULAR command line. import is in Python command line.
 - need to use PyQt in order to get dynamic JavaScript data. Python and BeautifulSoup will not automatically get it
+- run python files from the regular command line, not python!
+- sys.exit(app.exec_()) creates a loop to stop the program from ending until the user quits out of it
+- benefits and drawbacks of "import ___", "from ____ import ____", and "from ____ import *""

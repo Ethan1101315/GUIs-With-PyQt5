@@ -5,3 +5,5 @@ but only install once
 - run python files from the regular command line, not python!
 - sys.exit(app.exec_()) creates a loop to stop the program from ending until the user quits out of it
 - benefits and drawbacks of "import ___", "from ____ import ____", and "from ____ import *""
+- basic "import ___" means you need the context every time you call a method. "PyQt5.Qt" NOT just "QT"
+- PyQt is for GUIs

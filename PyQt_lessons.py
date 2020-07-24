@@ -516,10 +516,153 @@ from PyQt5.uic.properties import QtGui
 ## Lesson 11
 
 ## Lesson 12
+# import sys
+# from PyQt5.QtCore import QCoreApplication, Qt
+# from PyQt5.QtGui import QIcon
+# from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QAction, QMessageBox
+# from PyQt5.QtWidgets import QCheckBox, QProgressBar, QComboBox, QLabel, QStyleFactory, QFontDialog, QColorDialog, QCalendarWidget
+#
+# class window(QMainWindow):
+#
+#     def __init__(self):
+#         super(window, self).__init__()
+#         self.setGeometry(50,50, 500, 300)
+#         self.setWindowTitle('lesson 11')
+#
+#         # create an item to be put into the menu
+#         extractAction = QAction('woohoo', self)
+#         extractAction.setShortcut('ctrl+d')
+#         extractAction.setStatusTip('leave the app')
+#         extractAction.triggered.connect(self.close_application)
+#
+#         self.statusBar()
+#
+#         # create the menu bar itself
+#         mainMenu = self.menuBar()
+#         fileMenu = mainMenu.addMenu('Click here')
+#         fileMenu.addAction(extractAction)
+#
+#         self.home()
+#
+#     def home(self):
+#         # create "quit" button
+#         btn = QPushButton('quit', self)
+#         btn.clicked.connect(self.close_application)
+#         btn.resize(btn.sizeHint())
+#         btn.move(20, 100)
+#
+#         # create checkbox
+#         checkBox = QCheckBox('quadruple the size', self)
+#         checkBox.setGeometry(200, 160, 200, 20)
+#         #checkBox.move(0,62.5)
+#         checkBox.stateChanged.connect(self.enlarge_window)
+#
+#         # create progress bar
+#         self.progress = QProgressBar(self)
+#         self.progress.setGeometry(200, 80, 288,20)
+#
+#         # create button to activate progress bar
+#         self.btn = QPushButton('Download self esteem', self)
+#         self.btn.setGeometry(200, 120, 250,20)
+#         self.btn.clicked.connect(self.download)
+#
+#         # create a dropdown for style selection
+#         self.styleChoice = QLabel("windowsvista", self)
+#         self.styleChoice.move(25, 150)
+#
+#         # create the combobox and add options
+#         comboBox = QComboBox(self)
+#         comboBox.addItem('windowsvista')
+#         comboBox.addItem('windows')
+#         comboBox.addItem('fusion')
+#         comboBox.setGeometry(20, 250, 100, 40)
+#         self.styleChoice.move(20, 150)
+#         comboBox.activated[str].connect(self.style_choice)
+#
+#         # create a toolbar item
+#         extractAction = QAction(QIcon('in_rainbows.jpg'), '2007', self)
+#         extractAction.triggered.connect(self.close_application)
+#
+#         # create the toolbar itself (it will be underneath the menu bar)
+#         self.toolBar = self.addToolBar('Extraction')
+#         self.toolBar.addAction(extractAction)
+#
+#         # create a font widget for the toolbar
+#         fontPicker = QAction('Font', self)
+#         fontPicker.triggered.connect(self.font_picker)
+#         # self.toolBar = self.addToolBar('Font')
+#         self.toolBar.addAction(fontPicker)
+#
+#         # add a color-picker widget to the toolbar
+#         colorPicker = QAction('Font bg Color', self)
+#         colorPicker.triggered.connect(self.color_picker)
+#         self.toolBar.addAction(colorPicker)
+#
+#         # create a calendar
+#         calendar = QCalendarWidget(self)
+#         calendar.move(200, 200)
+#         calendar.resize(300, 300)
+#
+#         self.show()
+#
+#     # method for closing the application and printing corresponding messages
+#     def close_application(self):
+#
+#         choice = QMessageBox.question(self, 'Message',
+#                                          "Do you actually want to do that? Seriously?", QMessageBox.Yes |
+#                                          QMessageBox.No, QMessageBox.Yes)
+#
+#         if choice == QMessageBox.Yes:
+#             print('game OVER')
+#             sys.exit()
+#         else:
+#             pass
+#
+#     # method for changing the window size depending on the status of a check box
+#     def enlarge_window(self,state):
+#         if state == Qt.Checked:
+#             self.setGeometry(50, 50, 1000, 600)
+#         else:
+#             self.setGeometry(50,50, 500, 300)
+#
+#     # method for controlling the status of the download bar
+#     def download(self):
+#         self.completed = 0
+#
+#         while self.completed < 100:
+#             self.completed += 0.001
+#             self.progress.setValue(self.completed)
+#
+#     # method for selecting the style of the entire page
+#     def style_choice(self, text):
+#         # change the actual style
+#         self.styleChoice.setText(text)
+#         QApplication.setStyle(QStyleFactory.create(text))
+#
+#     # method for font selection
+#     def font_picker(self):
+#         font, valid = QFontDialog.getFont()
+#         if valid:
+#             self.styleChoice.setFont(font)
+#
+#     # method for color selection
+#     def color_picker(self):
+#         color = QColorDialog.getColor()
+#         self.styleChoice.setStyleSheet('QWidget {background-color: %s}' % color.name())
+#
+# def run():
+#     app = QApplication(sys.argv)
+#     Gui = window()
+#     sys.exit(app.exec_())
+#
+# run()
+
+# Lesson 13
+
 import sys
 from PyQt5.QtCore import QCoreApplication, Qt
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QAction, QMessageBox
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QAction, QMessageBox, QTextEdit
 from PyQt5.QtWidgets import QCheckBox, QProgressBar, QComboBox, QLabel, QStyleFactory, QFontDialog, QColorDialog, QCalendarWidget
 
 class window(QMainWindow):
@@ -527,7 +670,7 @@ class window(QMainWindow):
     def __init__(self):
         super(window, self).__init__()
         self.setGeometry(50,50, 500, 300)
-        self.setWindowTitle('lesson 11')
+        self.setWindowTitle('lesson 13')
 
         # create an item to be put into the menu
         extractAction = QAction('woohoo', self)
@@ -541,6 +684,16 @@ class window(QMainWindow):
         mainMenu = self.menuBar()
         fileMenu = mainMenu.addMenu('Click here')
         fileMenu.addAction(extractAction)
+
+        # create a text editor widget
+        textEditor = QAction('&Editor', self)
+        textEditor.setShortcut('Ctrl+E')
+        textEditor.setStatusTip('Open Editor')
+        textEditor.triggered.connect(self.text_editor)
+
+        # add the text editor widget to the main menu
+        editorMenu = mainMenu.addMenu('&Editor')
+        editorMenu.addAction(textEditor)
 
         self.home()
 
@@ -649,6 +802,11 @@ class window(QMainWindow):
     def color_picker(self):
         color = QColorDialog.getColor()
         self.styleChoice.setStyleSheet('QWidget {background-color: %s}' % color.name())
+
+    # method for creating text editor if widget item is selected
+    def text_editor(self):
+        self.textEdit = QTextEdit()
+        self.setCentralWidget(self.textEdit)
 
 def run():
     app = QApplication(sys.argv)

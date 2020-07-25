@@ -1,4 +1,4 @@
-# python-webscraping
+# GUIs With PyQt5
 
 Topics:
 - BeautifulSoup

@@ -13,6 +13,8 @@ Topics:
   - Opening, editing, and saving files
   - The tutorial linked below provides a Save As feature. I added the regular Save feature. 
 - QtDesigner
+  - Creating a layout
+  - Using the .ui file to add functionality to the layout in a new .py file
 
 Sources: 
 - https://pythonprogramming.net/introduction-scraping-parsing-beautiful-soup-tutorial/#:~:text=To%20use%20beautiful%20soup%2C%20you,%2Dget%20install%20python%2Dlxml%20.

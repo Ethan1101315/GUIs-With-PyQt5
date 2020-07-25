@@ -7,3 +7,9 @@ but only install once
 - benefits and drawbacks of "import ___", "from ____ import ____", and "from ____ import *""
 - basic "import ___" means you need the context every time you call a method. "PyQt5.Qt" NOT just "QT"
 - PyQt is for GUIs
+- in "QPushButton("&Quit");", the ampersand indicates that "Q" (or whichever letter follows the ampersand) is a hotkey to trigger the corresponding action.
+        - But also need another line to actually set the shortcut so not sure what this is useful for?
+- "with" statement simplifies file streams / file access operations
+- Tuple is an ordered, immutable set of values, often separated by commas and no brackets.
+        - in "name, __ = function()" name, __ is a tuple?
+- Main menu / menuBar is the actual bar. You then add different menus to it. Each menu is a word you see on the bar. Like "File". These menus can then have different options once you click into them.

@@ -12,9 +12,12 @@ Topics:
   - Text editor widget
   - Opening, editing, and saving files
   - The tutorial linked below provides a Save As feature. I added the regular Save feature. 
+- QtDesigner
 
 Sources: 
 - https://pythonprogramming.net/introduction-scraping-parsing-beautiful-soup-tutorial/#:~:text=To%20use%20beautiful%20soup%2C%20you,%2Dget%20install%20python%2Dlxml%20.
 - https://towardsdatascience.com/web-scraping-metacritic-reviews-using-beautifulsoup-63801bbe200e
 - https://pythonprogramming.net/basic-gui-pyqt-tutorial/
+- https://pythonprogramming.net/file-saving-pyqt-tutorial/
+- https://stackoverflow.com/questions/18429452/convert-pyqt-ui-to-python
   

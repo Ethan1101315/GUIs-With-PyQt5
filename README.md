@@ -21,4 +21,5 @@ Sources:
 - https://pythonprogramming.net/file-saving-pyqt-tutorial/
 - https://stackoverflow.com/questions/18429452/convert-pyqt-ui-to-python
 - https://doc.qt.io/qtforpython/tutorials/basictutorial/uifiles.html
+- https://www.learnpyqt.com/courses/qt-creator/embed-pyqtgraph-custom-widgets-qt-app/
   

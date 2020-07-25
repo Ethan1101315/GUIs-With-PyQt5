@@ -13,3 +13,5 @@ but only install once
 - Tuple is an ordered, immutable set of values, often separated by commas and no brackets.
         - in "name, __ = function()" name, __ is a tuple?
 - Main menu / menuBar is the actual bar. You then add different menus to it. Each menu is a word you see on the bar. Like "File". These menus can then have different options once you click into them.
+- Create layout in QtDesigner. Then create a new .py file to import the .ui code and add functionality to the layout.
+- To interact with the layout, reference the names of items as given in QtDesigner or the .ui file (for example, if the pushbutton is named "tom", you use the word "tom" to make stuff happen when a user clicks on the pushbutton)
